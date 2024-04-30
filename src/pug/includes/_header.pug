@@ -1,0 +1,55 @@
+header.header
+    .header__container
+        button.burger.header__nav-toggle(type="button" aria-expanded="false" data-nav-toggle)
+            span.burger__line
+            span.burger__line
+            span.burger__line
+
+        .logo.header__logo
+            a.logo__link(href="#" aria-label="logo")
+                img.logo__img.logo__img--hidden-lg(src="img/logo.svg" width="134" height="85" alt="logo")
+                img.logo__img.logo__img--visible-lg(src="img/logo-preloader.svg" width="72" height="25" alt="logo")
+
+        nav.menu.header__menu
+            ul.menu__list
+                li.menu__item
+                    a.menu__link(href="/#about-section" data-scroll) Про нас
+                
+                li.menu__item
+                    a.menu__link(href="/#pets-section" data-scroll) Наши бенгалы
+                
+                li.menu__item
+                    a.menu__link(href="/#gallery-section" data-scroll) Галерея
+                
+                li.menu__item
+                    a.menu__link(href="/#consult-section" data-scroll) Как купить
+                
+                li.menu__item
+                    a.menu__link(href="/#faq-section" data-scroll) Faq
+                
+                li.menu__item
+                    a.menu__link(href="/#contacts-section" data-scroll) Контакты
+
+        address.social.header__social
+            ul.social__list
+                li.social__item
+                    a.social__link(href="#" aria-label="Instagram")
+                        svg.social__icon(width="24" height="24")
+                            use(xlink:href="img/sprite.svg#instagram")
+
+                li.social__item
+                    a.social__link(href="#" aria-label="Facebook")
+                        svg.social__icon(width="12" height="23")
+                            use(xlink:href="img/sprite.svg#facebook")
+
+        .lang.is-dropdown
+            button.lang__toggle.is-dropdown__toggle(type="button") RU
+                svg.lang__toggle-icon(width="11" height="6")
+                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+            ul.lang__list
+                li.lang__item
+                    a.lang__link(href="#") EN
+
+                li.lang__item
+                    a.lang__link(href="#") DE

@@ -1,0 +1,20 @@
+section.banner-section
+    picture.banner-section__picture.animation-right(data-delay="1")
+        source(srcset="img/banner-img-mobile@2x.webp 2x, img/banner-img-mobile.webp" width="320" height="570" media="(max-width: 767.98px)")
+        img.banner-section__picture-img(src="img/banner-img.webp" srcset="img/banner-img@2x.webp 2x" loading="lazy" width="739" height="660" alt="alt")
+
+    picture.banner-section__bg-left.animation-left(data-delay="1")
+        img.banner-section__bg-left-img(src="img/bv.svg" loading="lazy" width="171" height="203" alt="alt")
+
+    .container.banner-section__container
+        .banner-section__content
+            p.banner-section__welcome.animation-down(data-delay="0.2") Добро пожаловать к нам
+            
+            h1.banner-section__title.animation-down(data-delay="0.4") BellaVista 
+                span.gold-color Bengals
+
+            p.banner-section__descr.animation-down(data-delay="0.6") Котята бенгальской породы с высокими стандартами чистоты и исключительного качества доступны в серебристом и черно-полосатом окрасе.
+
+            .banner-section__buttons.animation-down(data-delay="0.8")
+                a.button.banner-section__button(href="#pets-section" data-scroll) Наши бенгалы
+                a.button.button--outline.banner-section__button(href="#about-section" data-scroll) Узнать больше

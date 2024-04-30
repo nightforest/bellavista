@@ -1,0 +1,42 @@
+.breadcrumbs
+    margin-bottom: 20px
+
+    &__list
+        padding-left: 0
+        list-style: none
+        margin: 0
+        font-size: 0
+
+    &__item
+        line-height: 1.2
+        position: relative
+        color: var(--white)
+        display: inline
+        font-weight: 400
+        font-size: 14px
+
+        &:after
+            margin: 0 5px
+            content: '/'
+
+        &:last-child
+            margin-right: 0
+
+            &:after
+                display: none
+
+    &__link
+        position: relative
+        color: var(--white)
+        text-decoration: underline
+        display: inline
+        transition: all .5s ease
+
+        &:hover
+            color: var(--gold)
+
+        &:active
+            color: var(--gold)
+
+        &:focus-visible
+            color: var(--gold)

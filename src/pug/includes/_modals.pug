@@ -1,0 +1,218 @@
+.modal-wrap
+    #modal-consult.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title Оказание консультационных фелинологических услуг, вопросы питания, здоровья, поведения бенгалов
+
+                form.form.modal__form(id="consult-form" autocomplete="off" novalidate="novalidate")
+                    .form__row
+                        .form__col.form__col--6
+                            input#inputNameConsult.input.form__input(type="text" name="inputNameConsult" placeholder="Имя *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+                        
+                        .form__col.form__col--6
+                            input#inputEmailConsult.input.form__input(type="email" name="inputEmailConsult" placeholder="Email *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+
+                    .form__row
+                        .form__col.form__col--4
+                            input#inputWhatsappConsult.input.form__input(type="text" name="inputWhatsappConsult" placeholder="WhatsApp *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+                        
+                        .form__col.form__col--4
+                            input#inputInstagramConsult.input.form__input(type="text" name="inputInstagramConsult" placeholder="Instagram" autocomplete="off")
+                        
+                        .form__col.form__col--4
+                            input#inputFacebookConsult.input.form__input(type="text" name="inputFacebookConsult" placeholder="Facebook" autocomplete="off")
+
+                    .form__group
+                        textarea#commentConsult.textarea.form__input(name="commentConsult" rows="5" placeholder="Сообщение" autocomplete="off")
+
+                    .form__group.form__group--flex
+                        label.form__label Выбор связи:
+
+                        .radio.form__radio
+                            input.radio__input#radio-1(type="radio" name="contacsType" value="true" checked)
+                            label.radio__label(for="radio-1") Email
+
+                        .radio.form__radio
+                            input.radio__input#radio-2(type="radio" name="contacsType" value="true")
+                            label.radio__label(for="radio-2") WhatsApp
+
+                        .radio.form__radio
+                            input.radio__input#radio-3(type="radio" name="contacsType" value="true")
+                            label.radio__label(for="radio-3") Instagram
+                        
+                        .radio.form__radio
+                            input.radio__input#radio-4(type="radio" name="contacsType" value="true")
+                            label.radio__label(for="radio-4") Facebook
+                                        
+                    .form__group.form__group--center
+                        .checkbox
+                            input.checkbox__input#checkboxAgreeConsult(type="checkbox" name="checkbox" value="true" required)
+                            label.checkbox__label(for="checkboxAgreeConsult") Согласен с условиями 
+                                a.checkbox__link(href="#") Политики конфиденциальности
+
+                    .form__button-group
+                        button.button.form__button Отправить
+
+    #modal-sell.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title.modal__title--big Амберсанд Мустанг - продажа
+
+                form.form.modal__form(id="sell-form" autocomplete="off" novalidate="novalidate")
+                    .form__row
+                        .form__col.form__col--6
+                            input#inputNameSell.input.form__input(type="text" name="inputNameSell" placeholder="Имя *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+                        
+                        .form__col.form__col--6
+                            input#inputEmailSell.input.form__input(type="email" name="inputEmailSell" placeholder="Email *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+
+                    .form__row
+                        .form__col.form__col--4
+                            input#inputWhatsappSell.input.form__input(type="text" name="inputWhatsappSell" placeholder="WhatsApp *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+                        
+                        .form__col.form__col--4
+                            input#inputInstagramSell.input.form__input(type="text" name="inputInstagramSell" placeholder="Instagram" autocomplete="off")
+                        
+                        .form__col.form__col--4
+                            input#inputFacebookSell.input.form__input(type="text" name="inputFacebookSell" placeholder="Facebook" autocomplete="off")
+
+                    .form__group
+                        textarea#commentSell.textarea.form__input(name="commentSell" rows="5" placeholder="Сообщение" autocomplete="off")
+
+                    .form__group.form__group--flex
+                        label.form__label Выбор связи:
+
+                        .radio.form__radio
+                            input.radio__input#radio-sell-1(type="radio" name="contacsTypeSell" value="true" checked)
+                            label.radio__label(for="radio-sell-1") Email
+
+                        .radio.form__radio
+                            input.radio__input#radio-sell-2(type="radio" name="contacsTypeSell" value="true")
+                            label.radio__label(for="radio-sell-2") WhatsApp
+
+                        .radio.form__radio
+                            input.radio__input#radio-sell-3(type="radio" name="contacsTypeSell" value="true")
+                            label.radio__label(for="radio-sell-3") Instagram
+                        
+                        .radio.form__radio
+                            input.radio__input#radio-sell-4(type="radio" name="contacsTypeSell" value="true")
+                            label.radio__label(for="radio-sell-4") Facebook
+                                        
+                    .form__group.form__group--center
+                        .checkbox
+                            input.checkbox__input#checkboxAgreeSell(type="checkbox" name="checkbox" value="true" required)
+                            label.checkbox__label(for="checkboxAgreeSell") Согласен с условиями 
+                                a.checkbox__link(href="#") Политики конфиденциальности
+
+                    .form__button-group
+                        button.button.form__button Отправить
+
+    #modal-pet.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .swiper.pet-slider.modal__slider.modal__slider--left
+                    .swiper-wrapper
+                        .swiper-slide.pet-slider__slide
+                            picture.pet-slider__picture
+                                img.pet-slider__img(src="img/modal-pet-img.webp" srcset="img/modal-pet-img@2x.webp 2x" loading="lazy" width="421" height="334" alt="alt")
+                        
+                        .swiper-slide.pet-slider__slide
+                            picture.pet-slider__picture
+                                img.pet-slider__img(src="img/modal-pet-img.webp" srcset="img/modal-pet-img@2x.webp 2x" loading="lazy" width="421" height="334" alt="alt")
+                        
+                        .swiper-slide.pet-slider__slide
+                            picture.pet-slider__picture
+                                img.pet-slider__img(src="img/modal-pet-img.webp" srcset="img/modal-pet-img@2x.webp 2x" loading="lazy" width="421" height="334" alt="alt")
+
+                    button.pet-slider__prev(type="button" aria-label="previous slide")
+                        svg.pet-slider__prev-icon(width="15" height="29")
+                            use(xlink:href="img/sprite.svg#arrow-left")
+
+                    button.pet-slider__next(type="button" aria-label="next slide")
+                        svg.pet-slider__next-icon(width="15" height="29")
+                            use(xlink:href="img/sprite.svg#arrow-right")
+                            
+                h3.modal__title.modal__title--left Амберсанд Мустанг
+
+                .modal__type Порода: 
+                    strong Bengal
+                
+                .modal__buttons
+                    button.button.button--md.modal__button(type="button") Продажа
+                    button.button.button--md.button--white.modal__button(type="button") Консультация
+                
+                .modal__text
+                    p Профессиональный питомник бенгальских кошек. Питомник занимается разведением  бенгальских кошек коричневого и серебрянного окрасов.
+                    p Регистрация в международных  фелинологических системах WCF и TICA.
+                    p Профессиональный питомник бенгальских кошек. Питомник занимается разведением  бенгальских кошек коричневого и серебрянного окрасов.
+                    p Регистрация в международных  фелинологических системах WCF и TICA . Оказание консультационных фелинологических услуг, вопросы питания, здоровья, поведения бенгалов. Продажа котят.
+                    p Профессиональный питомник бенгальских кошек. Питомник занимается разведением  бенгальских кошек коричневого и серебрянного окрасов.
+                    p Регистрация в международных  фелинологических системах WCF и TICA . Оказание консультационных фелинологических услуг, вопросы питания, здоровья, поведения бенгалов. Продажа котят.
+                    p Профессиональный питомник бенгальских кошек. Питомник занимается разведением  бенгальских кошек коричневого и серебрянного окрасов.
+                    p Регистрация в международных  фелинологических системах WCF и TICA . Оказание консультационных фелинологических услуг, вопросы питания, здоровья, поведения бенгалов. Продажа котят.
+
+    #modal-product.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .modal__row
+                    .modal__col
+                        .swiper.pet-slider.modal__slider.modal__slider--small
+                            .swiper-wrapper
+                                .swiper-slide.pet-slider__slide
+                                    picture.pet-slider__picture
+                                        img.pet-slider__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="292" height="292" alt="alt")
+                                
+                                .swiper-slide.pet-slider__slide
+                                    picture.pet-slider__picture
+                                        img.pet-slider__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="292" height="292" alt="alt")
+                                
+                                .swiper-slide.pet-slider__slide
+                                    picture.pet-slider__picture
+                                        img.pet-slider__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="292" height="292" alt="alt")
+
+                            button.pet-slider__prev(type="button" aria-label="previous slide")
+                                svg.pet-slider__prev-icon(width="15" height="29")
+                                    use(xlink:href="img/sprite.svg#arrow-left")
+
+                            button.pet-slider__next(type="button" aria-label="next slide")
+                                svg.pet-slider__next-icon(width="15" height="29")
+                                    use(xlink:href="img/sprite.svg#arrow-right")
+                    
+                    .modal__col
+                        .modal__content
+                            h3.modal__title.modal__title--left Purina Pro Plan (Пурина Про План) Delicate Adult Lamb
+
+                            .modal__descr
+                                p Сухой корм с ягненком для котов с чувствительным пищеварением
+                            
+                            .modal__buttons
+                                button.button.button--md.modal__button(type="button") Продажа
+                        
+                .modal__text
+                    p Пушистые красавцы имеют очень хрупкую пищеварительную систему. Для котов с пищевой аллергией или повышенной чувствительностью к питанию американский бренд Про План разработал специальное меню, которое учитывает особенности четверолапого любимца. Полнорационный сухой микс содержит много диетического мяса индейки и ягненка. Эти сорта прекрасно усваиваются не перегружают желудок и обеспечивают питомца животным протеином. Рис является природным абсорбентом, снижает риск аллергических реакций и благотворно влияет на работу желудочно-кишечного тракта. Благодаря исключительному вкусу и аромату, хрустящий обед не оставит равнодушным вашего котика.
+                    h3 Преимущества:
+                    ul.check-list
+                        li отлично подходит питомцам с чувствительным пищеварением;
+                        li высокое содержание животного протеина в составе;
+                        li содержит витамины и минералы;
+                        li отличный вкус и привлекательный аромат;
+                        li высокое качество по демократичной цене.
+                    p
+                        strong Состав:
+                        |  высококачественный ягненок* (17%) (в том числе легкие и печень), сушеный протеин индейки*, порошок кукурузного протеина*, рис*, жиры животные, порошок соевого протеина*, гороховый протеин*, кукурузный крахмал, яич кукуруза*, сушеный корень цикория, минеральные вещества, жир рыбий, гидролизат протеинов животного происхождения, дрожжи*.

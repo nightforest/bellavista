@@ -1,0 +1,134 @@
+.footer
+    position: relative
+    background: linear-gradient(45deg, #220003 20%, #121212)
+
+    &__top
+        
+        &-container
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            gap: 30px
+            padding: 60px 15px 30px
+
+            @media ($max-md)
+                display: flex
+                flex-direction: column
+                gap: 15px
+                padding: 45px 15px 30px
+    
+    &__col
+
+        &--3
+            grid-column: 3 span
+        
+        &--4
+            grid-column: 4 span
+        
+        &--5
+            grid-column: 5 span
+
+    &__logo
+        margin-bottom: 8px
+
+        @media ($max-md)
+            display: flex
+            justify-content: center
+    
+    &__info
+        text-wrap: balance
+        font-size: 18px
+        line-height: 1.55
+        color: rgba(255, 255, 255, .6)
+
+        @media ($max-md)
+            max-width: 220px
+            margin: 0 auto
+            font-size: 14px
+            text-align: center
+    
+    &__title
+        position: relative
+        margin-bottom: 32px
+        font-size: 24px
+        font-weight: 800
+
+        @media ($max-md)
+            margin-bottom: 26px
+            font-size: 20px
+
+        &:before
+            position: absolute
+            bottom: -12px
+            width: 56px
+            height: 2px
+            border-radius: 2px
+            background: var(--gradient)
+            content: ""
+
+    &-menu
+
+        &__list
+            margin: 0
+            padding: 0
+            list-style: none
+            column-width: 100px
+            column-count: 2
+            column-gap: 15px
+
+        &__item
+            margin-bottom: 15px
+
+            @media ($max-md)
+                margin-bottom: 10px
+        
+        &__link
+            color: rgba(255, 255, 255, .6)
+            transition: color .5s ease
+
+            @media ($max-md)
+                font-size: 14px
+
+    &__email
+        margin-bottom: 12px
+
+    &__bottom
+
+        &-container
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 15px
+            padding: 20px 15px
+
+            @media ($max-md)
+                flex-direction: column-reverse
+
+            &:before
+                position: absolute
+                top: 0
+                left: 15px
+                right: 15px
+                height: 1px
+                background: rgba(255, 255, 255, .3)
+                content: ""
+
+                @media ($max-md)
+                    left: 0
+                    right: 0
+        
+    &__copyright
+        font-size: 14px
+
+        @media ($max-md)
+            text-align: center
+            font-size: 12px
+    
+    &__dev
+        display: inline-flex
+        align-items: center
+        gap: 12px
+        font-size: 14px
+
+        &-link
+            display: flex

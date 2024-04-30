@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+html
+    position: relative
+    min-height: 100%
+    scroll-behavior: smooth
+
+::selection
+    background: var(--gold)
+    color: var(--black)
+
+body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    font-size: 16px
+    line-height: 1.44
+    font-family: var(--font)
+    font-weight: 400
+    color: var(--white)
+    background: var(--black)
+    backface-visibility: hidden
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-weight: 700
+    margin: 0
+    line-height: 1.2
+
+a
+    text-decoration: none
+    color: var(--gold)
+
+    &:hover,
+    &:active
+        color: var(--gold)
+        text-decoration: none
+
+    &:focus-visible
+        color: var(--gold)
+        outline: none
+        text-decoration: none
+
+    // &:visited
+    //     color: inherit
+    //     font-weight: 400
+
+.br
+    display: block
+
+.gold-link
+    color: var(--gold)
+    border-width: 1px
+    border-style: solid
+    border-image: linear-gradient(90deg, #EFD56E 0%, #C79E35 100%) 1
+    border-top: none
+    border-left: none
+    border-right: none
+    background: var(--gradient)
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    text-decoration: none
+    transition: border-color .5s ease
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        border-color: transparent
+        border-image: none
+
+.link-button
+    color: var(--white)
+    font-weight: 700
+    text-decoration: underline
+    text-decoration-thickness: 1px
+    text-underline-offset: 3px
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        color: var(--white)
+        text-decoration: none
+    
+    &--black
+        color: var(--black)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--black)
+
+.gold-color
+    color: var(--gold)
+    background: var(--gradient)
+    background-clip: text
+    -webkit-text-fill-color: transparent
+
+.gold-bg
+    background: var(--gradient)
+    border-radius: 15px
+    padding: 7px 5px
+    white-space: nowrap
+    
+p
+    margin: 0
+
+strong
+    font-weight: 700
+    
+.container
+    width: 100%
+    margin: 0 auto
+    padding: 0 15px
+
+    @media ($min-sm)
+        max-width: 100%
+
+    @media ($min-md)
+        max-width: 768px
+
+    @media ($min-lg)
+        max-width: 968px
+
+    @media ($min-xl)
+        max-width: 1140px
+
+.main
+    flex: 1
+
+    &--center
+        display: flex
+        align-items: center
+        width: 100%
+
+.parallax-section
+    position: relative
+    overflow: hidden
+    z-index: 0
+
+.foot-bg
+    position: absolute
+    color: #E7DFD7
+    z-index: -1
+
+    &--1
+        top: calc(50% - 60px)
+        left: 50px
+    
+    &--2
+        top: 60px
+        left: 20%
+        rotate: -25deg !important
+    
+    &--3
+        top: 30%
+        left: 50%
+        rotate: -25deg !important
+
+    &--4
+        top: 20px
+        right: 30%
+        rotate: 20deg !important
+    
+    &--5
+        bottom: 20px
+        right: 32%
+    
+    &--6
+        top: 40%
+        right: 5%
+        rotate: 25deg !important
+
+.scroll-disabled
+    overflow-y: hidden
+
+.animation-fade,
+.animation-left,
+.animation-right,
+.animation-down,
+.animation-up
+    opacity: 0
+
+input,
+textarea,
+button,
+select,
+a
+    -webkit-tap-highlight-color: transparent

@@ -1,0 +1,189 @@
+.modal
+    position: absolute
+    top: 0
+    left: 0
+    z-index: $z-index-3
+    width: 100%
+    height: calc(var(--vh) * 100)
+    overflow-x: hidden
+    overflow-y: auto
+    outline: 0
+    opacity: 0
+    visibility: hidden
+    transition: opacity .5s ease
+
+    &.is-visible
+        opacity: 1
+        visibility: visible
+
+        .modal__window
+            transform: scale(1)
+
+    &-wrap
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1000
+        width: 100%
+        height: calc(var(--vh) * 100)
+        outline: 0
+        background: rgba(0, 0, 0, .8)
+        opacity: 0
+        visibility: hidden
+        transition: opacity .5s ease
+
+        &.is-visible
+            opacity: 1
+            visibility: visible
+
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: center
+        min-height: 100%
+        padding: 40px 16px
+
+    &__window
+        position: relative
+        width: 100%
+        max-width: 920px
+        background: #fff
+        color: var(--black)
+        border-radius: 15px
+        transform: scale(.8)
+        transition: all .5s ease
+        padding: 30px 30px 40px
+
+        @media ($max-md)
+            padding: 30px 20px
+
+    &__close
+        position: absolute
+        top: -33px
+        right: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 23px
+        height: 23px
+        font-size: 0
+        color: var(--white)
+        transition: color .5s ease
+
+        &:hover,
+        &:focus-visible
+            color: var(--gold)
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+        align-items: center
+        margin-bottom: 20px
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            align-items: stretch
+            gap: 15px
+            margin-bottom: 15px
+    
+    &__col
+        grid-column: 6 span
+
+    &__title
+        font-size: 28px
+        font-weight: 700
+        line-height: 1.2
+        margin: 0 0 30px
+        text-align: center
+
+        @media ($max-md)
+            font-size: 20px
+
+        &:last-child
+            margin-bottom: 0
+
+        &--big
+            font-size: 40px
+
+            @media ($max-md)
+                font-size: 20px
+        
+        &--left
+            text-align: left
+            margin-bottom: 15px
+
+    &__descr
+        margin-bottom: 20px
+        font-size: 18px
+
+        @media ($max-lg)
+            font-size: 14px
+
+    &__slider
+        border-radius: 15px
+        max-width: 420px
+        margin: 0 20px 10px 0
+
+        @media ($max-md)
+            margin: 0 0 20px
+            max-width: 100%
+
+        &--left
+            float: left
+
+            @media ($max-md)
+                float: none
+
+        .pet-slider__prev
+            left: 20px
+        
+        .pet-slider__next
+            right: 20px
+        
+        &--small
+            height: 340px
+
+            .pet-slider__prev,
+            .pet-slider__next
+                border: 1px solid #888
+                color: #888
+    
+    &__type
+        font-size: 20px
+        margin-bottom: 20px
+
+        @media ($max-md)
+            font-size: 16px
+
+    &__buttons
+        display: flex
+        flex-wrap: wrap
+        gap: 15px 20px
+        margin-bottom: 15px
+
+        @media ($max-sm)
+            flex-direction: column
+    
+    &__button
+        max-width: 160px
+        width: 100%
+
+        @media ($max-sm)
+            max-width: 100%
+
+    &__text
+        font-size: 18px
+
+        @media ($max-lg)
+            font-size: 14px
+
+        p
+
+            &:not(:last-child)
+                margin-bottom: 1rem
+
+        h3
+            font-size: 18px
+            margin-bottom: 1rem

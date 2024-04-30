@@ -1,0 +1,66 @@
+.consult-card
+    position: relative
+    border: 1px solid #f5f5f5
+    border-radius: 15px
+    width: 100%
+    min-height: 200px
+    height: 100%
+    box-shadow: 8px -1px 18px 0 rgba(0, 0, 0, .1)
+    background: var(--white)
+    color: var(--black)
+    padding: 60px 20px 20px
+    font-size: 20px
+    text-align: center
+    text-wrap: balance
+
+    @media (max-width: 1600px)
+        font-size: 16px
+    
+    @media ($max-lg)
+        min-height: 160px
+        padding: 60px 10px 20px
+
+    &:after
+        position: absolute
+        top: calc(50% - 22px)
+        right: -1px
+        width: 22px
+        height: 44px
+        border-radius: 12px 0 0 12px
+        box-shadow: inset 8px 0 18px 0 rgba(0, 0, 0, .1)
+        content: ""
+
+        @media ($max-lg)
+            top: auto
+            bottom: -1px
+            right: calc(50% - 22px)
+            width: 44px
+            height: 22px
+            border-radius: 12px 12px 0 0
+
+    &__number
+        position: absolute
+        top: -40px
+        left: calc(50% - 40px)
+        width: 80px
+        height: 80px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 15px
+        background: var(--black)
+        color: var(--white)
+        font-size: 32px
+        font-weight: 800
+
+    &--black
+        background: var(--black)
+        color: var(--white)
+
+        &:after
+            display: none  
+
+        .consult-card__number
+            background: var(--white)
+            box-shadow: 8px -1px 18px 0 rgba(0, 0, 0, .1)
+            color: var(--black)

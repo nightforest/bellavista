@@ -1,0 +1,36 @@
+section.contacts-section#contacts-section
+   .container.contacts-section__container
+        h2.contacts-section__title.animation-down(data-delay="0.2")
+            span.gold-bg Связаться с нами
+            br
+            | Мы всегда рады с вами пообщаться
+
+        form.form.contacts-section__form.animation-down(id="contacts-form" autocomplete="off" novalidate="novalidate" data-delay="0.2")
+            .form__row
+                .form__col.form__col--6
+                    input#inputName.input.form__input(type="text" name="inputName" placeholder="Имя *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+                
+                .form__col.form__col--6
+                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+
+            .form__row
+                .form__col.form__col--4
+                    input#inputWhatsapp.input.form__input(type="text" name="inputWhatsapp" placeholder="WhatsApp *" data-error-message="Пожалуйста, заполните это поле" autocomplete="off" required)
+                
+                .form__col.form__col--4
+                    input#inputInstagram.input.form__input(type="text" name="inputInstagram" placeholder="Instagram" autocomplete="off")
+                
+                .form__col.form__col--4
+                    input#inputFacebook.input.form__input(type="text" name="inputFacebook" placeholder="Facebook" autocomplete="off")
+
+            .form__group
+                textarea#comment.textarea.form__input(name="comment" rows="5" placeholder="Сообщение" autocomplete="off")
+
+            .form__group.form__group--center
+                .checkbox
+                    input.checkbox__input#checkboxAgree(type="checkbox" name="checkbox" value="true" required)
+                    label.checkbox__label(for="checkboxAgree") Согласен с условиями 
+                        a.checkbox__link(href="#") Политики конфиденциальности
+
+            .form__button-group
+                button.button.form__button Отправить

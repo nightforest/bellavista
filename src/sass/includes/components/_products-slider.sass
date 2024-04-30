@@ -1,0 +1,29 @@
+.products-slider
+    overflow: visible
+
+    @media ($max-md)
+        padding-bottom: 30px
+
+    &__wrapper
+
+        @media ($min-md)
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            gap: 30px
+            margin: 0
+            padding: 0
+            list-style: none
+
+    &__slide
+
+        @media ($min-md)
+            grid-column: 6 span
+
+        @media ($min-lg)
+            grid-column: 4 span
+
+    &__scrollbar
+        --swiper-scrollbar-bg-color: #ededed
+
+        @media ($min-md)
+            display: none

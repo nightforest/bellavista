@@ -1,0 +1,29 @@
+.up-button
+    position: absolute
+    top: -80px
+    right: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 80px
+    height: 80px
+    background: var(--button-gradient)
+    background-size: 100% 200%
+    border-radius: 15px 15px 0 0
+    color: var(--black)
+    transition: background .5s ease
+    cursor: pointer
+    z-index: $z-index-1
+
+    @media ($max-md)
+        width: 40px
+        height: 40px
+        top: -40px
+        right: calc(50% - 20px)
+        border-radius: 10px 10px 0 0
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        background-position: bottom
+        color: var(--black)

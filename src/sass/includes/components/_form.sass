@@ -1,0 +1,71 @@
+.form
+
+    &__input
+
+        &.just-validate-error-field
+            border-color: var(--red)
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+        margin-bottom: 20px
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            gap: 20px
+    
+    &__col
+        position: relative
+        grid-column: 12 span
+
+        &--4
+            grid-column: 4 span
+        
+        &--6
+            grid-column: 6 span
+
+    &__group
+        position: relative
+        margin-bottom: 20px
+
+        &--center
+            display: flex
+            justify-content: center
+        
+        &--flex
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            gap: 10px 15px
+
+    &__label
+        display: block
+        font-size: 18px
+        font-weight: 700
+        line-height: 1.2
+        margin: 0
+
+        @media ($max-md)
+            font-size: 14px
+    
+    &__button-group
+        text-align: center
+
+    &__button
+        max-width: 255px
+        width: 100%
+
+        @media ($max-sm)
+            max-width: 100%
+
+    .just-validate-error-label
+        position: absolute
+        left: 0
+        top: 100%
+        font-size: 12px
+        line-height: 1
+        color: var(--red) !important
+        padding: 3px 0
+        border-radius: 10px

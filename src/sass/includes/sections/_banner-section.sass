@@ -1,0 +1,115 @@
+.banner-section
+    position: relative
+    min-height: 800px
+    width: 100%
+    display: flex
+    align-items: center
+    background: linear-gradient(45deg, #350000 20%, #121212)
+    overflow: hidden
+
+    @media ($max-md)
+        min-height: 540px
+        height: 100svh
+        padding: 40px 0
+        align-items: flex-end
+
+    &__picture
+        position: absolute
+        bottom: -8px
+        right: 0
+        max-width: 40%
+
+        @media ($max-md)
+            max-width: 100%
+
+        &-img
+            max-width: 100%
+            height: auto
+    
+    &__bg-left
+        position: absolute
+        bottom: 0
+        left: 50px
+        display: inline-flex
+
+        @media ($max-xl)
+            display: none
+
+        &-img
+            max-width: 100%
+            height: auto
+
+    &__content
+        position: relative
+
+        @media ($max-md)
+            text-align: center
+
+    &__welcome
+        font-size: 24px
+        font-weight: 700
+        line-height: 1.2
+
+        @media ($max-md)
+            font-size: 18px
+            margin-bottom: 8px
+
+    &__title
+        font-size: 75px
+        font-weight: 700
+        font-family: var(--font-title)
+        line-height: 1.2
+        margin: 0 0 15px
+
+        @media ($max-md)
+            font-size: 32px
+            margin-bottom: 8px
+        
+        &--small
+            font-size: 64px
+
+            @media ($max-md)
+                font-size: 26px
+
+    &__descr
+        max-width: 580px
+        font-size: 18px
+        margin-bottom: 32px
+
+        @media ($max-md)
+            max-width: 100%
+            margin-bottom: 15px
+            font-size: 14px
+        
+        &--big
+            font-size: 24px
+
+            @media ($max-md)
+                font-size: 14px
+
+    &__buttons
+        display: flex
+        gap: 30px
+
+        @media ($max-md)
+            flex-direction: column
+            align-items: center
+            gap: 15px
+
+    &__button
+        max-width: 255px
+        width: 100%
+
+        @media ($max-sm)
+            max-width: 100%
+
+    &--thanks
+
+        @media ($max-md)
+            padding-bottom: 75px
+
+        .banner-section__picture
+
+            @media ($max-md)
+                bottom: auto
+                top: 100px

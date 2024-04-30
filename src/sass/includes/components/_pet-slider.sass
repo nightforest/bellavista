@@ -1,0 +1,61 @@
+.pet-slider
+    position: relative
+    height: 100%
+
+    &__picture
+        display: flex
+        width: 100%
+        height: 100%
+    
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__prev,
+    &__next
+        position: absolute
+        top: calc(50% - 30px)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 60px
+        height: 60px
+        border-radius: 15px
+        border: 1px solid var(--white)
+        color: var(--white)
+        z-index: $z-index-2
+        opacity: .5
+        transition: opacity .5s ease, color .5s ease, background .5s ease
+
+        @media ($max-md)
+            top: calc(50% - 20px)
+            width: 40px
+            height: 40px
+            border-radius: 10px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            opacity: 1
+            background: var(--white)
+            color: var(--black)
+
+        &-icon
+
+            @media ($max-md)
+                width: 17px
+                height: 17px
+
+    &__prev
+        left: 40px
+
+        @media ($max-md)
+            left: 15px
+
+
+    &__next
+        right: 40px
+
+        @media ($max-md)
+            right: 15px

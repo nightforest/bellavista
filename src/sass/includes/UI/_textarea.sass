@@ -1,0 +1,44 @@
+.textarea
+    display: block
+    width: 100%
+    height: auto
+    border-radius: 15px
+    background: none
+    border: 1px solid #D6D6D6
+    padding: 22px 20px
+    box-shadow: none
+    font-size: 18px
+    line-height: 1.2
+    color: var(--black)
+    font-weight: 400
+    outline: none
+    appearance: none
+    transition: all .5s ease
+    resize: vertical
+
+    @media ($max-md)
+        font-size: 16px
+        padding: 14px 20px
+
+    &:hover,
+    &:focus
+        border-color: var(--black)
+
+    &::placeholder
+        color: #A3A3A3
+        font-weight: 400
+
+    &:read-only
+        color: var(--grey)
+
+        &:hover,
+        &:focus
+            border-color: var(--grey)
+
+    &::-webkit-contacts-auto-fill-button,
+    &::-webkit-credentials-auto-fill-button
+        visibility: hidden
+        display: none !important
+        pointer-events: none
+        position: absolute
+        right: 0

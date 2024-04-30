@@ -1,0 +1,46 @@
+.tabs
+    position: relative
+
+    &__nav
+        list-style: none
+        padding: 0
+        margin: 0 0 50px
+        display: flex
+        justify-content: center
+        gap: 30px
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 20px
+            margin-bottom: 30px
+
+        &-item
+            position: relative
+            max-width: 290px
+            width: 100%
+
+            @media ($max-md)
+                max-width: 100%
+
+        &-btn
+            width: 100%
+
+            &:before
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: linear-gradient(215deg, #EFD56E 30.83%, #FFF792 62.19%, #B88612 92.05%)
+                background-size: 200%
+                content: ""
+                z-index: -1
+                opacity: 0
+                transition: all .5s ease
+
+            &.is-active
+                color: var(--black)
+                border: none
+
+                &:before
+                    opacity: 1

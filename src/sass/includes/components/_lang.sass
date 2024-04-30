@@ -1,0 +1,96 @@
+.lang
+    position: relative
+
+    &.is-active
+
+        .lang__list
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+
+        .lang__toggle-icon
+            transform: rotateX(180deg)
+
+    &__toggle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 60px
+        height: 60px
+        background: var(--button-gradient)
+        background-size: 100% 200%
+        border-radius: 15px
+        gap: 2px
+        font-size: 16px
+        font-weight: 500
+        line-height: 1
+        text-transform: uppercase
+        color: var(--black)
+        transition: background .5s ease
+
+        @media ($max-lg)
+            width: 40px
+            height: 40px
+            border-radius: 10px
+            font-size: 11px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--black)
+            background-position: bottom
+        
+        &-icon
+            transition: transform .5s ease
+
+            @media ($max-lg)
+                width: 8px
+                height: 6px
+
+    &__list
+        position: absolute
+        top: calc(100% + 10px)
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, .7)
+        border: 1px solid rgba(255, 255, 255, .3 )
+        border-radius: 15px
+        margin: 0
+        padding: 15px 10px
+        list-style: none
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+        transition: all .25s ease
+
+        @media ($max-lg)
+            border-radius: 10px
+            left: -10px
+            width: calc(100% + 20px)
+    
+    &__item
+
+        &:not(:last-child)
+            margin-bottom: 10px
+
+            @media ($max-lg)
+                margin-bottom: 15px
+    
+    &__link
+        display: block
+        font-size: 16px
+        font-weight: 400
+        text-transform: uppercase
+        color: var(--white)
+        line-height: 1.5
+        text-align: center
+        transition: color .5s ease
+
+        @media ($max-lg)
+            font-size: 11px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--gold)
+

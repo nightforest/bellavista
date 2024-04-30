@@ -1,0 +1,63 @@
+.swiper
+    --swiper-pagination-bullet-horizontal-gap: 4px
+    --swiper-pagination-bottom: 0
+    --swiper-scrollbar-sides-offset: 0px
+    --swiper-scrollbar-bottom: 0
+    --swiper-scrollbar-size: 7px
+    --swiper-scrollbar-border-radius: 2px
+    --swiper-scrollbar-bg-color: rgba(237, 237, 237, .2)
+    --swiper-scrollbar-drag-bg-color: var(--gradient)
+
+    &-wrapper
+        box-sizing: border-box !important
+
+    &-slide
+        height: auto
+
+    &-scrollbar
+        cursor: pointer
+
+    &-pagination-fraction
+        left: 50%
+        bottom: 20px
+        margin-left: -57px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        gap: 10px
+        width: 114px
+        height: 52px
+        border-radius: 10px
+        background: var(--white)
+        color: var(--grey)
+        font-size: 24px
+        font-weight: 500
+
+        @media ($max-md)
+            width: 80px
+            height: 30px
+            margin-left: -40px
+            font-size: 18px
+
+        .swiper-pagination-current
+            color: var(--black)
+
+    &-pagination
+        line-height: 1
+        font-size: 0
+        z-index: $z-index-0
+
+        &-bullet
+            width: 10px
+            height: 10px
+            border-radius: 0
+            background: var(--black)
+            transform: skew(-15deg)
+            transition: opacity .5s ease
+
+            &:hover
+                opacity: 1
+
+            // &-active
+            //     background: var(--green)
